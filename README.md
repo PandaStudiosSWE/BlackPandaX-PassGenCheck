@@ -13,11 +13,11 @@ ________________________________________________________________________________
 
 You need to install the dependencies for it to run (i will make a requirement.txt later)
 
-pip or pip3 install random && string && hashlib && requests
+pip or pip3 install random && string && hashlib && requests && colorama
 
 or just install them individually with pip or pip3 install PACKAGENAME
 
-Packages this project uses are random, string, os, hashlib, requests
+Packages this project uses are random, string, os, hashlib, requests, colorama
 
 ___________________________________________________________________________________________________________________________________________________________________________________
 
