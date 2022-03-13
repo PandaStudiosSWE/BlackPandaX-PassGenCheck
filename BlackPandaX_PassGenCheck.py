@@ -5,7 +5,7 @@ def main():
 
     os.system('cls' if os.name == 'nt' else 'clear')
     
-    print(" [1] Generate Password [2] Generate Password List [3] Check Password\n")
+    print(f"{Fore.GREEN} [1] Generate Password {Fore.YELLOW}[2] Generate Password List {Fore.RED}[3] Check Password\n{Fore.WHITE}")
     print(" Passwords generated are safe as they're checked so that they're not in any data breach\n\n")
     
     option = input("\n Enter Option: ")
@@ -14,19 +14,21 @@ def main():
         
         characters = list(string.ascii_letters + string.digits + "ඞ!@#$%^&*()" + "ඞåäöÅÄÖ")
         length = int(input(" \n Enter password length: "))
-        input(f"\n Your Password: {Fore.GREEN}{pass_gen(length, characters)}{Fore.WHITE}")
+        print(f"\n Your Password: {Fore.GREEN}{pass_gen(length, characters)}{Fore.WHITE}")
+        input("\n Press enter to return to menu ")
     
     elif option == "2":
         
         characters = list(string.ascii_letters + string.digits + "!@#$%^&*()" + "åäöÅÄÖ")
         amount = int(input("\n Enter amount of passwords to generate: "))
+        string_size = int(input("\n Enter the length you want the passwords to be: "))
         
         with open(f"[{amount}] Secure-Passwords.txt", 'w') as f:
             for i in range(amount):
-                    b = pass_gen(50, characters)
+                    b = pass_gen(string_size, characters)
                     f.write(f"{b}\n\n")
                     
-        print("\n Done!")
+        print(f"\n {Fore.GREEN}Done!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
     
     elif option == "3":
