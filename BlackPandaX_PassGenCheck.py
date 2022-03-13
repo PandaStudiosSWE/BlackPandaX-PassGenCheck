@@ -70,7 +70,7 @@ def pass_check(a):
         
     elif leak_check(a) is "Safe":
     
-        print("\n {a} Has Not Been Cracked!")
+        print(f"\n {a} Has Not Been Cracked!")
         input("\n Press enter to return to menu")
         main()
         
