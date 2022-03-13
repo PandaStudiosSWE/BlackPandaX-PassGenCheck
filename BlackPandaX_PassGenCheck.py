@@ -19,10 +19,10 @@ def main():
     elif option == "2":
         
         characters = list(string.ascii_letters + string.digits + "!@#$%^&*()" + "åäöÅÄÖ")
-        ammount = int(input("\n Enter ammount of passwords to generate: "))
+        amount = int(input("\n Enter amount of passwords to generate: "))
         
-        with open(f"[{ammount}] Secure-Passwords.txt", 'w') as f:
-            for i in range(ammount):
+        with open(f"[{amount}] Secure-Passwords.txt", 'w') as f:
+            for i in range(amount):
                     b = pass_gen(50, characters)
                     f.write(f"{b}\n\n")
                     
