@@ -1,5 +1,6 @@
 import random, string, os, hashlib, requests
-#Made By ★ 𝘗𝘢𝘯𝘥𝘢𝘚𝘵𝘶𝘥𝘪𝘰𝘴 ★#0001 (BlackPandaX on THM)
+from colorama import init, Fore
+#ඞMade By ★ 𝘗𝘢𝘯𝘥𝘢𝘚𝘵𝘶𝘥𝘪𝘰𝘴 ★#0001 (BlackPandaX on THMඞ)
 def main():
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -13,7 +14,7 @@ def main():
         
         characters = list(string.ascii_letters + string.digits + "ඞ!@#$%^&*()" + "ඞåäöÅÄÖ")
         length = int(input(" \n Enter password length: "))
-        input(f"\n Your Password: {pass_gen(length, characters)}")
+        input(f"\n Your Password: {Fore.GREEN}{pass_gen(length, characters)}{Fore.WHITE}")
     
     elif option == "2":
         
@@ -26,15 +27,12 @@ def main():
                     f.write(f"{b}\n\n")
                     
         print("\n Done!")
-        input("\n Press enter to return to menu")
+        input("\n Press enter to return to menu ")
     
     elif option == "3":
         
         passwd = input(" \n Enter your password: ")
         pass_check(passwd)
-        
-    else:
-        main()
     
     main()
         
@@ -64,14 +62,14 @@ def pass_check(a):
     
     if leak_check(a) is "Cracked":
     
-        print(f"\n {a} has Been Cracked!")
-        input("\n Press enter to return to menu")
+        print(f"{Fore.RED}\n {a} has Been Cracked!{Fore.WHITE}")
+        input("\n Press enter to return to menu ")
         main()
         
     elif leak_check(a) is "Safe":
     
-        print(f"\n {a} Has Not Been Cracked!")
-        input("\n Press enter to return to menu")
+        print(f"{Fore.GREEN}\n {a} Has Not Been Cracked!{Fore.WHITE}")
+        input("\n Press enter to return to menu ")
         main()
         
 def leak_check(a):
@@ -96,6 +94,13 @@ def leak_check(a):
     
     
 if __name__ == "__main__":
-    main()
+
+    if os.name is 'nt':
     
-#Made By ★ 𝘗𝘢𝘯𝘥𝘢𝘚𝘵𝘶𝘥𝘪𝘰𝘴 ★#0001
+        main()
+    else:
+    
+        init(convert=True)
+        main()
+    
+#ඞMade By ★ 𝘗𝘢𝘯𝘥𝘢𝘚𝘵𝘶𝘥𝘪𝘰𝘴 ★#0001 (BlackPandaX on THM)
