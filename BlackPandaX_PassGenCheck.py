@@ -5,8 +5,7 @@ def main():
 
     os.system('cls' if os.name == 'nt' else 'clear')
     
-    print(f"{Fore.GREEN} [1] Generate Password {Fore.YELLOW}[2] Generate Password List {Fore.RED}[3] Check Password\n{Fore.WHITE}")
-    print(" Passwords generated are safe as they're checked so that they're not in any data breach\n\n")
+    print(f"{Fore.GREEN} [1] Generate Password {Fore.YELLOW}[2] Generate Password List {Fore.RED}[3] Check Password\n{Fore.WHITE} Passwords generated are safe as they're checked so that they're not in any data breach\n\n")
     
     option = input("\n Enter Option: ")
     
