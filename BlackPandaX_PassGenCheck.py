@@ -51,24 +51,24 @@ def pass_gen(a, b):
     
     factory_pass = "".join(password)
     
-    if leak_check(factory_pass) is "Cracked":
+    if leak_check(factory_pass) == "Cracked":
     
         pass_gen(a)
         
-    elif leak_check(factory_pass) is "Safe":
+    elif leak_check(factory_pass) == "Safe":
     
         return factory_pass
     
         
 def pass_check(a):
     
-    if leak_check(a) is "Cracked":
+    if leak_check(a) == "Cracked":
     
         print(f"{Fore.RED}\n {a} has Been Cracked!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
         main()
         
-    elif leak_check(a) is "Safe":
+    elif leak_check(a) == "Safe":
     
         print(f"{Fore.GREEN}\n {a} Has Not Been Cracked!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
@@ -97,7 +97,7 @@ def leak_check(a):
     
 if __name__ == "__main__":
 
-    if os.name is 'nt':
+    if os.name == 'nt':
     
         main()
     else:
