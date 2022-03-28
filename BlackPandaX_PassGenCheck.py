@@ -65,13 +65,14 @@ def pass_check(a):
     
         print(f"{Fore.RED}\n {a} has Been Cracked!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
-        main()
+        #main()
         
     elif leak_check(a) == "Safe":
     
         print(f"{Fore.GREEN}\n {a} Has Not Been Cracked!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
-        main()
+        #main()
+    main()
         
 def leak_check(a):
     
