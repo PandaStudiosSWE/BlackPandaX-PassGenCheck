@@ -40,14 +40,13 @@ def main():
 def pass_gen(a, b):
     
     random.shuffle(b)
-    
     password = []
+    
     for i in range(a):
     
         password.append(random.choice(b))
         
     random.shuffle(password)
-    
     factory_pass = "".join(password)
     
     if leak_check(factory_pass) == "Cracked":
@@ -62,16 +61,12 @@ def pass_gen(a, b):
 def pass_check(a):
     
     if leak_check(a) == "Cracked":
-    
         print(f"{Fore.RED}\n {a} has Been Cracked!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
-        #main()
         
     elif leak_check(a) == "Safe":
-    
         print(f"{Fore.GREEN}\n {a} Has Not Been Cracked!{Fore.WHITE}")
         input("\n Press enter to return to menu ")
-        #main()
     main()
         
 def leak_check(a):
@@ -88,20 +83,16 @@ def leak_check(a):
     
 
     if hash_string in hashes:
-        return "Cracked"
-            
+        return "Cracked"   
     elif hash_string not in hashes:
         return "Safe"
             
     
     
 if __name__ == "__main__":
-
     if os.name == 'nt':
-    
         main()
     else:
-    
         init(convert=True)
         main()
     
